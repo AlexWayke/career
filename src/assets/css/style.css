@@ -55,5 +55,52 @@ button {
 
 html,
 body {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+body {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background-color: rgb(186, 221, 245);
+  color: #333;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  width: 400px;
+  padding: 20px;
+  margin: 100px auto;
+  background: lightsalmon;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal-content.sale {
+  background-color: crimson;
+  color: #fff;
+}
+.modal-button {
+  display: inline-block;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.actions a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px #fff solid;
+}
+.actions a:not(:last-child) {
+  margin-right: 10px;
 }
