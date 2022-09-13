@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <div v-if="showModal">
+  <teleport to=".modals" v-if="showModal">
     <Modal theme="sale" @close="toggleModal">
       <template v-slot:links>
         <a href="#">sign up now</a>
@@ -9,8 +9,19 @@
       <h1>Lorem</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, minima.</p>
     </Modal>
-  </div>
+  </teleport>
+  <teleport to=".modals" v-if="showModalTwo">
+    <Modal theme="sale" @close="toggleModalTwo">
+      <template v-slot:links>
+        <a href="#">sign up now</a>
+        <a href="#">more info</a>
+      </template>
+      <h1>Lorem 2</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </Modal>
+  </teleport>
   <button @click="toggleModal" class="modal-button">Open modal</button>
+  <button @click="toggleModalTwo" class="modal-button">Open another modal</button>
 </template>
 
 <script>
@@ -21,15 +32,17 @@ export default {
   components: { Modal },
   data() {
     return {
-      title: 'FirstApp',
-      header: 'Lorem',
       second: 'Lorem ipsum',
-      showModal: false
+      showModal: false,
+      showModalTwo: false
     }
   },
   methods: {
     toggleModal() {
       this.showModal = !this.showModal
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo
     }
   }
 }

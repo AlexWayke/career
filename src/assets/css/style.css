@@ -93,6 +93,9 @@ body {
   margin-top: 20px;
   border-radius: 5px;
 }
+.modal-button:not(:last-child) {
+  margin-right: 10px;
+}
 
 .actions a {
   display: inline-block;
