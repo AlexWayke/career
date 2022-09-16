@@ -1,13 +1,12 @@
 <template>
-  <SIgnUpForm />
+  <router-view/>
 </template>
 
 <script>
-import SIgnUpForm from './components/SIgnUpForm.vue';
 
 export default {
   name: 'App',
-  components: { SIgnUpForm },
+  components: {  },
   data() {
   }
 }
