@@ -15,3 +15,31 @@ body {
     background-color: rgb(225, 248, 245);
     color: #333;
 }
+.postlist{
+    color: #fff;
+    width: 500px;
+    background-color: #777;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    &-content {
+        font-weight: 600;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & p {
+            margin-top: 10px;
+            font-weight: normal;
+        }
+    }
+}
+h3 {
+    text-transform: uppercase;
+}
+button {
+    background-color: orange;
+    padding: 20px;
+    border-radius: 5px;
+}
