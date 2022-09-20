@@ -27,18 +27,43 @@
                 </div>
             </div>
         </div>
+        <div class="about">
+            <div class="about-content container">
+                <div class="about-image">
+                    <img src="../assets/img/about/promoImg.png" alt="promoImage">
+                </div>
+                <div class="about-promo">
+                    <h2 class="about-title">
+                        Лучшие условия для твоей самореализации
+                    </h2>
+                    <p class="about-text">
+                        Я́ндекс — российская транснациональная компания в отрасли информационных технологий, чьё головное юридическое лицо зарегистрировано в Нидерландах, владеющая одноимённой системой поиска в интернете, интернет-порталом и веб-службами в нескольких странах. Наиболее заметное положение занимает на рынках России, Белоруссии и Казахстана. Также Яндекс является одной из самых быстрорастущих корпораций в России.
+                    </p>
+                </div>
+                <div class="about-slider">
+                    <Slider/>
+                </div>
+                <div class="about-promo">
+                    <h2 class="about-title">
+                        Работай в просторном офисе
+                    </h2>
+                </div>
+            </div>
+            <div class="about-conditions container"></div>
+        </div>
     </div>
 </template>
 
 <script>
+import Slider from '@/components/Slider.vue';
 
 export default {
     name: "AboutCompany",
-    components: {  },
+    components: { Slider },
     setup() {
 
         return {  }
-    }
+    },
 }
 </script>
 

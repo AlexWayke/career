@@ -8,10 +8,18 @@ body {
 }
 
 body {
-    font-size: 30px;
+    font-size: 10px;
     background-color: F6F7F8;
     font-family: neue;
     color: #212121;
+}
+
+.container {
+    max-width: 1200px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .aboutcompany {
@@ -63,34 +71,164 @@ body {
     src: url(../fonts/neue/NeueMachina-Bold.woff2);
 }
 
+// Font Styles ========================
+h1, h2 {
+    font-size: 5em;
+    line-height: 1em;
+    font-weight: 700;
+}
 
 // Header =============================
 .header {
+    z-index: 10;
     position: fixed;
     width: 100%;
+    padding: 25px 40px;
+    box-sizing: border-box;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+
     color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     .header-logo {
+        font-size: 3em;
+        line-height: 1em;
     }
     &-contacts {
+        line-height: 2em;
         &--city {
+            font-size: 1.6em;
+            text-align: right;
         }
         &--link {
+            font-size: 1.4em;
+            text-decoration: underline;
         }
     }
 }
 
 // Mainscreen =========================
 .mainscreen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
     &-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
     &-content {
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     &-title {
+        max-width: 500px;
+        margin-bottom: 30px;
+        text-align: center;
     }
 }
 
 // Navigation =========================
 .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    width: fit-content;
+
     &-link {
+        display: block;
+        cursor: pointer;
+        padding: 13px 29px;
+        box-sizing: border-box;
+        border: 1px solid #fff;
+        border-radius: 70px;
+        transition: color .3s;
+        color: #fff;
+        font-size: 1.4em;
+        line-height: 1.4;
+
+        &:hover {
+            color: #888888;
+        }
+    }
+}
+
+// About ==============================
+.about {
+    padding-top: 80px;
+    &-content {
+        display: flex;
+        flex-direction: column;
+    }
+    &-image {
+        position: relative;
+        max-width: 800px;
+        padding: 0 10px;
+        height: 500px;
+        & img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        &::before {
+            content: '';
+            z-index: -5;
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            height: 640px;
+            width: 900px;
+            background-color: #F6F7F8;
+        }
+    }
+    &-promo {
+        max-width: 570px;
+        margin: 0 0 80px auto;
+    }
+    &-title {
+        display: block;
+        padding-right: 100px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    &-text {
+        font-size: 1.8em;
+        line-height: 1.6em;
+    }
+    &-slider {
+    }
+    &-conditions {
+    }
+}
+
+// Slider =============================
+.slider {
+    width: 100%;
+    height: auto;
+    & img {
+        width: 100%;
+        height: 100%
     }
 }
