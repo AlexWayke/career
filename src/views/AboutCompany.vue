@@ -49,7 +49,39 @@
                     </h2>
                 </div>
             </div>
-            <div class="about-conditions container"></div>
+        </div>
+        <div class="conditions">
+            <div class="conditions-wrapper container">
+                <h2 class="conditions-title">
+                    Выбирай комфортные условия
+                </h2>
+                <ul class="conditions-list">
+                    <li class="conditions-li">
+                        <h3 class="conditions-li--title">
+                            Доход без ограничений
+                        </h3>
+                        <p class="conditions-li--text">
+                            Финансовая стабильность и возможность получать повышенное вознаграждение за дополнительные часы работы или активную продажу продуктов
+                        </p>
+                    </li>
+                    <li class="conditions-li">
+                        <h3 class="conditions-li--title">
+                            Удобный график
+                        </h3>
+                        <p class="conditions-li--text">
+                            Работайте 5/2, 2/2 или по гибкому графику с почасовой оплатой — удаленно или в офисе. Если совмещаешь с учебой, то подберем подходящую вакансию
+                        </p>
+                    </li>
+                    <li class="conditions-li">
+                        <h3 class="conditions-li--title">
+                            Можно без опыта
+                        </h3>
+                        <p class="conditions-li--text">
+                            Главное — коммуникабель­ность, активность и желание работать, остальному научим. Начни свою карьеру в крупной и современной компании
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
