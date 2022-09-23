@@ -83,6 +83,32 @@
                 </ul>
             </div>
         </div>
+        <div class="blog container">
+            <h2 class="blog-title">
+                Заходи в наш Блог
+            </h2>
+            <button class="blog-button">
+                Читать блог
+            </button>
+            <div class="blog-template--side">
+                <div class="blog-item">
+                    <div class="blog-item--img">
+                        <img src="../assets/img/blog/1.png" alt="Blog">
+                    </div>
+                    <div class="blog-item--title">
+                        «В сбер я пришел уже пилотом».  Продакт — о том, как прыжки с парашютом и пилотирование самолетов помогают ему в работе
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <div class="blog-item--img">
+                        <img src="../assets/img/blog/2.png" alt="Blog">
+                    </div>
+                    <div class="blog-item--title">
+                        «В сбер я пришел уже пилотом».  Продакт — о том, как прыжки с парашютом и пилотирование самолетов помогают ему в работе
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 

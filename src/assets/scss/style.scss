@@ -76,6 +76,7 @@ h1, h2 {
     font-size: 5em;
     line-height: 1em;
     font-weight: 700;
+    text-transform: uppercase;
 }
 h3 {
     font-weight: 700;
@@ -264,6 +265,51 @@ h3 {
         &--text {
             font-size: 1.6em;
             line-height: 1.5em;
+        }
+    }
+}
+
+// Blog ===============================
+.blog {
+    width: 100%;
+    padding: 80px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    &-title {
+        display: block;
+        max-width: 360px;
+        margin: 52px 0 30px;
+    }
+    &-button {
+        position: absolute;
+    }
+    &-template--side {
+        max-width: 670px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &-item {
+        width: 100%;
+        position: relative;
+        height: 400px;
+        &--img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            & img { 
+                object-fit: cover;
+            }
+        }
+        &--title {
+            z-index: 10;
+            font-size: 1.8em;
+            line-height: 1.4em;
+            color: #fff;
         }
     }
 }
