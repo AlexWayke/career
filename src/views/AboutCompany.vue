@@ -83,41 +83,50 @@
                 </ul>
             </div>
         </div>
-        <div class="blog container">
-            <h2 class="blog-title">
-                Заходи в наш Блог
-            </h2>
-            <button class="blog-button">
-                Читать блог
-            </button>
-            <div class="blog-template--side">
-                <div class="blog-item">
-                    <div class="blog-item--img">
-                        <img src="../assets/img/blog/1.png" alt="Blog">
-                    </div>
-                    <div class="blog-item--title">
-                        «В сбер я пришел уже пилотом».  Продакт — о том, как прыжки с парашютом и пилотирование самолетов помогают ему в работе
-                    </div>
+        <div class="blog">
+            <div class="blog-wrapper container">
+                <div class="blog-template--side">
+                    <h2 class="blog-title">
+                        Заходи в наш Блог
+                    </h2>
+                    <button class="blog-button">
+                        Читать блог
+                    </button>
                 </div>
-                <div class="blog-item">
-                    <div class="blog-item--img">
-                        <img src="../assets/img/blog/2.png" alt="Blog">
+                <div class="blog-template--side">
+                    <div class="blog-item">
+                        <div class="blog-item--img">
+                            <img src="../assets/img/blog/1.png" alt="Blog">
+                        </div>
+                        <div class="blog-item--title">
+                            «В сбер я пришел уже пилотом».  Продакт — о том, как прыжки с парашютом и пилотирование самолетов помогают ему в работе
+                        </div>
                     </div>
-                    <div class="blog-item--title">
-                        «В сбер я пришел уже пилотом».  Продакт — о том, как прыжки с парашютом и пилотирование самолетов помогают ему в работе
+                    <div class="blog-item">
+                        <div class="blog-item--img">
+                            <img src="../assets/img/blog/2.png" alt="Blog">
+                        </div>
+                        <div class="blog-item--title">
+                            Четыре привычки, которые сделают мышление гибким    
+                        </div>
                     </div>
+                    <button class="blog-button disable">
+                        Читать блог
+                    </button>
                 </div>
             </div>
         </div>
+        <Vacancy/>
     </div>
 </template>
 
 <script>
 import Slider from '@/components/Slider.vue';
+import Vacancy from '@/components/Vacancy.vue';
 
 export default {
     name: "AboutCompany",
-    components: { Slider },
+    components: { Slider, Vacancy },
     setup() {
 
         return {  }

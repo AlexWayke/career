@@ -104,19 +104,19 @@ body {
   src: url(../fonts/neue/NeueMachina-Light.woff2);
 }
 @font-face {
-  font-family: graphic;
+  font-family: neue;
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/neue/NeueMachina-Regular.woff2);
 }
 @font-face {
-  font-family: graphic;
+  font-family: neue;
   font-style: normal;
   font-weight: 500;
   src: url(../fonts/neue/NeueMachina-Medium.woff2);
 }
 @font-face {
-  font-family: graphic;
+  font-family: neue;
   font-style: normal;
   font-weight: 700;
   src: url(../fonts/neue/NeueMachina-Bold.woff2);
@@ -311,22 +311,34 @@ h3 {
 
 .blog {
   width: 100%;
-  padding: 80px 15px;
+  padding: 80px 0;
+}
+.blog-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: relative;
 }
 .blog-title {
   display: block;
   max-width: 360px;
-  margin: 52px 0 30px;
+  margin: 52px 0 16px;
 }
 .blog-button {
-  position: absolute;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 16px 26px;
+  background-color: #FB4237;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1.6em;
+  line-height: 1.125em;
 }
 .blog-template--side {
-  max-width: 670px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -337,19 +349,136 @@ h3 {
   height: 400px;
 }
 .blog-item--img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
 .blog-item--img img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 .blog-item--title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 200px 30px 30px;
   z-index: 10;
   font-size: 1.8em;
   line-height: 1.4em;
   color: #fff;
+}
+
+.vacancy {
+  width: 100%;
+  background-color: #F6F7F8;
+  padding: 75px 0;
+}
+.vacancy-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+.vacancy-column {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.vacancy-title {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+.vacancy-count {
+  font-size: 1.4em;
+  line-height: 1.5em;
+}
+.vacancy-search {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.vacancy-search--input {
+  position: relative;
+}
+.vacancy-search--select {
+  width: 200px;
+}
+.vacancy-search label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: #757575;
+}
+.vacancy-search input {
+  height: 40px;
+  width: 200px;
+  background-color: inherit;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid #C2C2C2;
+  border-radius: 4px;
+}
+
+.select {
+  position: relative;
+  width: 200px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid #C2C2C2;
+  border-radius: 4px;
+  height: 40px;
+  cursor: pointer;
+}
+.select::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 5px;
+  background: no-repeat url(@/assets/img/icons/selectArrow.svg);
+  width: 9px;
+  height: 5px;
+}
+.select-options {
+  width: 100%;
+}
+.select-options--container {
+  position: relative;
+  overflow-y: scroll;
+  height: 150px;
+  border: 1px solid #C2C2C2;
+  border-radius: 4px;
+}
+.select-options--container::-webkit-scrollbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 6px;
+}
+.select-options--container::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+.select-options--item {
+  overflow: hidden;
+  padding: 8px 12px;
+}
+.select-options--item:not(:last-child) {
+  border-bottom: 1px solid #C2C2C2;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: height 0.3s ease;
+}
+
+.slide-enter-to {
+  height: 150px;
+}
+
+.slide-enter, .slide-leave-to {
+  height: 0px;
+}
+
+.disable {
+  display: none;
 }
