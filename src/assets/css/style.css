@@ -466,6 +466,9 @@ h3 {
 .select-options--item:not(:last-child) {
   border-bottom: 1px solid #C2C2C2;
 }
+.select-options--item:hover {
+  background: #999;
+}
 
 .slide-enter-active, .slide-leave-active {
   transition: height 0.3s ease;

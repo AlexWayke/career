@@ -42,9 +42,7 @@
                 this.placeholder = option.title;
                 this.toggleDropdown()
             }
-        },
-        props: {
-        },
+        }
     }
     </script>
 

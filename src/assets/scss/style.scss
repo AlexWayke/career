@@ -422,6 +422,9 @@ h3 {
             &:not(:last-child) {
                 border-bottom: 1px solid #C2C2C2;
             }
+            &:hover {
+                background: #999;
+            }
         }
     }
 }
@@ -437,6 +440,9 @@ h3 {
 .slide-enter, .slide-leave-to {
     height: 0px;
 }
+
+// Accordeon ==========================
+
 
 // Functional classes =================
 

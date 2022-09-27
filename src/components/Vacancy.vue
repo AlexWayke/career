@@ -17,6 +17,9 @@
                             <Select/>
                         </div>
                     </div>
+                    <div class="vacancy-accordion">
+                        <Accordion/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -24,8 +27,9 @@
 
 <script>
 import Select from '@/components/Select.vue';
+import Accordion from '@/components/Accordion.vue';
 export default {
-    components: { Select },
+    components: { Select, Accordion },
     data(){
         return{
         }

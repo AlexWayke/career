@@ -1,24 +1,23 @@
 {
-    "posts": [
+    "job": [
         {
             "id": 1,
-            "title": "Welcome to the blog",
-            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam odio, laudantium possimus natus itaque quas pariatur omnis nam necessitatibus",
-            "tags": [
-                "webdev",
-                "coding",
-                "news"
-            ]
-        },
-        {
-            "id": 2,
-            "title": "Top 5 css tips",
-            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam odio, laudantium possimus natus itaque quas pariatur omnis nam necessitatibus",
-            "tags": [
-                "css",
-                "webdev",
-                "coding"
-            ]
+            "title": "Программист-тестировщик",
+            "salary": "з/п не указана",
+            "location": "Москва",
+            "date": "14 февраля"
+        },{
+            "id": 1,
+            "title": "HR-менеджер",
+            "salary": "з/п не указана",
+            "location": "Москва",
+            "date": "14 февраля"
+        },{
+            "id": 1,
+            "title": "Аналитик",
+            "salary": "з/п не указана",
+            "location": "Москва",
+            "date": "14 февраля"
         }
     ]
 }
