@@ -1,17 +1,21 @@
 <template>
-    <div class="accordeon">
+    <div class="accordion">
         <div class="accordion-section">
-            <div class="accordion-section--title">Информационные технологии (3)</div>
-            <div class="accordion-section--container">
-                <div class="accordeon-item" v-for="vacancy in job" :key="vacancy.id">
-                    <div class="accordion-item--content">
-                        <div class="accordion-item--title">{{ vacancy.title }}</div>
-                        <div class="accordion-item--salary">{{ vacancy.salary }}</div>
-                        <div class="accordion-item--location">{{ vacancy.location }}</div>
+            <div class="accordion-section--title"  @click="toggleDropdown">Информационные технологии (3)</div>
+            <transition name="accordion">
+                <div class="accordion-section--container" v-show="showDropdown">
+                    <div class="accordion-item" v-for="vacancy in job" :key="vacancy.id">
+                        <div class="accordion-item--content">
+                            <div class="accordion-item--title">{{ vacancy.title }}</div>
+                            <div class="accordion-item--info">
+                                <p>{{ vacancy.salary }}</p>
+                                <p>{{ vacancy.location }}</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item--date">{{ vacancy.date }}</div>
                     </div>
-                    <div class="accordeon-item--date">{{ vacancy.date }}</div>
                 </div>
-            </div>
+            </transition>
         </div>
     </div>
 </template>
@@ -20,7 +24,13 @@
 export default {
     data(){
         return{
-            job: []
+            job: [],
+            showDropdown: false
+        }
+    },
+    methods: {
+        toggleDropdown() {
+        this.showDropdown = !this.showDropdown;
         }
     },
     mounted(){

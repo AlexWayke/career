@@ -353,7 +353,7 @@ h3 {
         display: flex;
         flex-direction: row;
         gap: 10px;
-        margin-right: auto;
+        margin: 0 auto 30px;
         &--input {
             position: relative;
         }
@@ -377,7 +377,7 @@ h3 {
         }
     }
     &-accordion{
-        margin-top: 30px;
+        height: fit-content;
     }
 }
 
@@ -446,21 +446,64 @@ h3 {
 }
 
 // Accordeon ==========================
-.accordeon {
+.accordion {
     &-section {
+        margin-bottom: 40px;
         &--title {
+            position: relative;
+            display: inline-block;
+            font-size: 1.4em;
+            font-weight: 700;
+            line-height: 1.5em;
+            cursor: pointer;
+            &::after{
+                content: '';
+                position: absolute;
+                top: calc(50% - 4px);
+                right: -34px;
+                width: 14px;
+                height: 8px;
+                background: no-repeat url(../img/icons/accordionArrow.svg);
+                &.rotate{
+                    transform: rotate(180deg);
+                    transition-duration: .3s;
+                }
+            }
         }
         &--container {
+            padding-top: 10px;
+            max-height: 250px;
+            overflow-y: scroll;
         }
     }
     &-item {
+        padding: 20px 0;
+        box-sizing: border-box;
+        display: flex;        
+        flex-wrap: wrap;
+        border-bottom: 1px solid #212121;
         &--content {
+            display: inline-flex;
+            justify-content: space-between;
+            margin-right: 80px;
+            width: 100%;
         }
         &--title {
+            display: inline-block;
+            font-size: 1.4em;
+            line-height: 1.5em;
+            text-decoration: underline;
+            z-index: 10;
         }
-        &--salary {
-        }
-        &--location {
+        &--info {
+            font-size: 1.4em;
+            line-height: 1.5em;
+            & p {
+                display: inline-block;
+                &:last-child {
+                    margin-left: 20px;
+                }
+            }
         }
         &--date {
         }
